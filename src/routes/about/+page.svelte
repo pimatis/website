@@ -16,6 +16,10 @@
       {
         title: "Our Values",
         description: "Our core values include transparency, inclusivity, innovation, and community. We believe in creating an environment where diverse perspectives are welcomed and everyone's contribution is valued."
+      },
+      {
+        title: "Our Goals",
+        description: "Our goals are to foster sustainable development in open source projects, promote education and skill-building among developers, and drive positive change through technology that benefits society as a whole."
       }
     ];
 
@@ -62,12 +66,12 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-20">
             {#each missionStatements as statement}
-            <div class="bg-white p-6 sm:p-8 border border-black/10 hover:border-[#0033ff]/30 transition-all duration-200 h-full">
-                <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{statement.title}</h2>
-                <p class="text-gray-600 text-sm sm:text-base">{statement.description}</p>
-            </div>
+                <div class="bg-white p-6 sm:p-8 border border-black/10 hover:border-[#0033ff]/30 transition-all duration-200 h-full">
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{statement.title}</h2>
+                    <p class="text-gray-600 text-sm sm:text-base">{statement.description}</p>
+                </div>
             {/each}
         </div>
 
@@ -86,18 +90,18 @@
         </div>
 
         {#if loading}
-        <div class="flex justify-center items-center h-32 sm:h-40 mb-12 sm:mb-16 lg:mb-20">
-            <i class="ri-loader-3-line animate-spin text-[#0033ff] text-2xl sm:text-3xl"></i>
-        </div>
-        {:else}
-        <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16 lg:mb-20">
-            {#each achievements as achievement}
-            <div class="bg-white text-center p-4 sm:p-6 border border-black/10 hover:border-[#0033ff]/30 transition-all duration-200 h-full">
-                <p class="text-2xl sm:text-3xl font-bold text-[#0033ff] mb-2">{achievement.figure}</p>
-                <p class="text-gray-600 text-sm sm:text-base">{achievement.description}</p>
+            <div class="flex justify-center items-center h-32 sm:h-40 mb-12 sm:mb-16 lg:mb-20">
+                <i class="ri-loader-3-line animate-spin text-[#0033ff] text-2xl sm:text-3xl"></i>
             </div>
-            {/each}
-        </div>
+        {:else}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-16 lg:mb-20">
+                {#each achievements as achievement}
+                    <div class="bg-white text-center p-4 sm:p-6 border border-black/10 hover:border-[#0033ff]/30 transition-all duration-200 h-full">
+                        <p class="text-2xl sm:text-3xl font-bold text-[#0033ff] mb-2">{achievement.figure}</p>
+                        <p class="text-gray-600 text-sm sm:text-base">{achievement.description}</p>
+                    </div>
+                {/each}
+            </div>
         {/if}
 
         <div class="text-center">

@@ -16,12 +16,8 @@
     }
 
     function handleClickOutside(event: MouseEvent) {
-        if (menuOpen &&
-            menuRef &&
-            !menuRef.contains(event.target as Node) &&
-            buttonRef &&
-            !buttonRef.contains(event.target as Node)) {
-            menuOpen = false;
+        if (menuOpen && menuRef && !menuRef.contains(event.target as Node) && buttonRef && !buttonRef.contains(event.target as Node)) {
+          menuOpen = false;
         }
     }
 
@@ -43,10 +39,9 @@
 </script>
 
 <div class="mx-auto w-auto h-16 flex justify-between items-center px-5 relative">
-    <div>
-        <h1 class="text-lg">Pimatis</h1>
-        <p class="text-xs">Building the future of digital solutions together.</p>
-    </div>
+    <a href="/">
+        <img src="https://www.upload.ee/image/17797875/pimatislogo-black.png" alt="Pimatis" class="w-6 opacity-70 hover:opacity-100 cursor-pointer hover:-rotate-12">
+    </a>
 
     <div class="hidden md:flex items-center">
         <a href="/" class="text-sm opacity-50 hover:opacity-100 transition-all duration-200">Home</a>
@@ -60,34 +55,37 @@
 
     <button bind:this={buttonRef} class="md:hidden text-[#0033ff] focus:outline-none" aria-label="Toggle menu" on:click|stopPropagation={toggleMobileMenu}>
         {#if menuOpen}
-        <i class="ri-close-line text-2xl"></i>
+            <i class="ri-close-line text-2xl"></i>
         {:else}
-        <i class="ri-menu-line text-2xl"></i>
+            <i class="ri-menu-line text-2xl"></i>
         {/if}
     </button>
 </div>
 
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 {#if menuOpen}
-<div class="fixed inset-0 border border-black/10 bg-black/50 z-40" transition:fade={{ duration: 200 }} on:click={closeMobileMenu}></div>
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <div class="fixed inset-0 border border-black/10 bg-black/50 z-40" transition:fade={{ duration: 200 }} on:click={closeMobileMenu}></div>
 
-<div bind:this={menuRef} class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-lg z-50" transition:slide={{ duration: 300, axis: 'y' }} on:click|stopPropagation on:keydown={(e) => e.key === 'Escape' && closeMobileMenu()} role="dialog" aria-modal="true">
-    <div class="flex flex-col p-5 space-y-4">
-        <a href="/" class="opacity-70 hover:opacity-100 hover:text-[#0033ff] transition-all duration-200">
-            <i class="ri-home-line text-[#0033ff]"></i>
-            Home
-        </a>
-        <a href="/about" class="opacity-70 hover:opacity-100 hover:text-[#0033ff] transition-all duration-200">
-            <i class="ri-user-line text-[#0033ff]"></i>
-            About
-        </a>
-        <a href="/projects" class="opacity-70 hover:opacity-100 hover:text-[#0033ff] transition-all duration-200">
-            <i class="ri-folder-line text-[#0033ff]"></i>
-            Projects
-        </a>
-        <a href="/contact" class="opacity-70 hover:opacity-100 hover:text-[#0033ff] transition-all duration-200">
-            <i class="ri-mail-line text-[#0033ff]"></i>
-            Contact
-        </a>
+    <!-- svelte-ignore a11y_interactive_supports_focus -->
+    <div bind:this={menuRef} class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-lg z-50" transition:slide={{ duration: 300, axis: 'y' }} on:click|stopPropagation on:keydown={(e) => e.key === 'Escape' && closeMobileMenu()} role="dialog" aria-modal="true">
+        <div class="flex flex-col p-5 space-y-4">
+            <a href="/" class="opacity-70 hover:opacity-100 hover:text-[#0033ff] transition-all duration-200">
+                <i class="ri-home-line text-[#0033ff]"></i>
+                Home
+            </a>
+            <a href="/about" class="opacity-70 hover:opacity-100 hover:text-[#0033ff] transition-all duration-200">
+                <i class="ri-user-line text-[#0033ff]"></i>
+                About
+            </a>
+            <a href="/projects" class="opacity-70 hover:opacity-100 hover:text-[#0033ff] transition-all duration-200">
+                <i class="ri-folder-line text-[#0033ff]"></i>
+                Projects
+            </a>
+            <a href="/contact" class="opacity-70 hover:opacity-100 hover:text-[#0033ff] transition-all duration-200">
+                <i class="ri-mail-line text-[#0033ff]"></i>
+                Contact
+            </a>
+        </div>
     </div>
-</div>
 {/if}

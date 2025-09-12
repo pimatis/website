@@ -47,25 +47,26 @@
                 Explore Projects
             </a>
         </div>
+
         {#if loading}
-        <div class="flex justify-center items-center py-10 sm:py-16 md:py-20">
-            <i class="ri-loader-3-line animate-spin text-[#0033ff] text-3xl"></i>
-        </div>
+            <div class="flex justify-center items-center py-10 sm:py-16 md:py-20">
+                <i class="ri-loader-3-line animate-spin text-[#0033ff] text-3xl"></i>
+            </div>
         {:else}
-        <div class="flex justify-center flex-wrap mt-8 sm:mt-10">
-            <div class="flex items-center mx-2 my-2 sm:my-1">
-                <i class="ri-folder-line text-[#0033ff] w-5 h-5 mr-2 flex-shrink-0"></i>
-                <span class="text-xs sm:text-sm"><strong>{stats.totalProjects}</strong> Open Source Projects</span>
+            <div class="flex justify-center flex-wrap mt-8 sm:mt-10">
+                <div class="flex items-center mx-2 my-2 sm:my-1">
+                    <i class="ri-folder-line text-[#0033ff] w-5 h-5 mr-2 flex-shrink-0"></i>
+                    <span class="text-xs sm:text-sm whitespace-nowrap"><strong>{stats.totalProjects}</strong> Open Source Projects</span>
+                </div>
+                <div class="flex items-center mx-2 my-2 sm:my-1">
+                    <i class="ri-star-line text-[#0033ff] w-5 h-5 mr-2 flex-shrink-0"></i>
+                    <span class="text-xs sm:text-sm whitespace-nowrap"><strong>{stats.totalStars}</strong> GitHub Stars</span>
+                </div>
+                <div class="flex items-center mx-2 my-2 sm:my-1">
+                    <i class="ri-git-branch-line text-[#0033ff] w-5 h-5 mr-2 flex-shrink-0"></i>
+                    <span class="text-xs sm:text-sm whitespace-nowrap"><strong>{stats.totalForks}</strong> Project Forks</span>
+                </div>
             </div>
-            <div class="flex items-center mx-2 my-2 sm:my-1">
-                <i class="ri-star-line text-[#0033ff] w-5 h-5 mr-2 flex-shrink-0"></i>
-                <span class="text-xs sm:text-sm"><strong>{stats.totalStars}</strong> GitHub Stars</span>
-            </div>
-            <div class="flex items-center mx-2 my-2 sm:my-1">
-                <i class="ri-git-branch-line text-[#0033ff] w-5 h-5 mr-2 flex-shrink-0"></i>
-                <span class="text-xs sm:text-sm"><strong>{stats.totalForks}</strong> Project Forks</span>
-            </div>
-        </div>
         {/if}
     </div>
 </section>
