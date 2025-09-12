@@ -7,7 +7,7 @@
             name: "Fatih Yılmaz",
             role: "Founder & Lead Developer",
             bio: "Fatih is a front-end developer with over 7+ years of experience in building scalable applications. He founded Pimatis with a vision to create accessible open-source solutions.",
-            image: "https://www.upload.ee/image/17911522/retouch_2024021816543458.png",
+            image: "https://avatars.githubusercontent.com/u/60826916?v=4",
             socialLinks: [
                 { platform: "github", url: "https://github.com/queaxtra", icon: "ri-github-fill" },
                 { platform: "linkedin", url: "https://linkedin.com/in/queaxtra", icon: "ri-linkedin-fill" },
@@ -29,7 +29,7 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
             {#each teamMembers as member}
                 <div class="bg-white border border-black/10 hover:border-[#0033ff]/30 transition-all duration-200 overflow-hidden">
                     <div class="aspect-square overflow-hidden">

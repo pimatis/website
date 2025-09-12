@@ -11,7 +11,7 @@
 
     :global(body) {
         font-family: 'Geist Mono', sans-serif;
-        background-color: #f1f1f1;
+        background-color: #fafafa;
         margin: 0;
         padding: 0;
         position: relative;
