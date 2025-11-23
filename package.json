@@ -3,14 +3,14 @@
 	"version": "0.0.1",
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^4.0.0",
-		"@sveltejs/kit": "^2.39.0",
+		"@sveltejs/kit": "^2.49.0",
 		"@sveltejs/vite-plugin-svelte": "^5.1.1",
-		"@tailwindcss/vite": "^4.1.13",
-		"svelte": "^5.38.10",
-		"svelte-check": "^4.3.1",
-		"tailwindcss": "^4.1.13",
-		"typescript": "^5.9.2",
-		"vite": "^6.3.6"
+		"@tailwindcss/vite": "^4.1.17",
+		"svelte": "^5.43.14",
+		"svelte-check": "^4.3.4",
+		"tailwindcss": "^4.1.17",
+		"typescript": "^5.9.3",
+		"vite": "^6.4.1"
 	},
 	"private": true,
 	"scripts": {

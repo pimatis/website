@@ -40,7 +40,7 @@
 
 <div class="mx-auto w-auto h-16 flex justify-between items-center px-5 relative">
     <a href="/">
-        <img src="https://www.upload.ee/image/17797875/pimatislogo-black.png" alt="Pimatis" class="w-6 opacity-70 hover:opacity-100 cursor-pointer hover:-rotate-12">
+        <img src="/assets/pimatis-black.png" alt="Pimatis" class="w-15 cursor-pointer hover:-rotate-12">
     </a>
 
     <div class="hidden md:flex items-center">

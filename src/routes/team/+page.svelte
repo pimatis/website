@@ -13,6 +13,15 @@
                 { platform: "linkedin", url: "https://linkedin.com/in/queaxtra", icon: "ri-linkedin-fill" },
                 { platform: "twitter", url: "https://x.com/queaxtra", icon: "ri-twitter-x-fill" }
             ]
+        },
+        {
+            name: "LeakWire",
+            role: "Cybersecurity Analyst",
+            bio: "A cybersecurity professional with expertise in SOC analysis and cryptography, actively working in security research and penetration testing. They operate across two distinct disciplines, combining analytical defense skills with offensive security capabilities.",
+            image: "https://avatars.githubusercontent.com/u/29897401?v=4",
+            socialLinks: [
+                { platform: "github", url: "https://github.com/leakwire", icon: "ri-github-fill" }
+            ]
         }
     ];
 </script>
